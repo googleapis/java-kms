@@ -62,6 +62,12 @@
     <dependencies>
 
       <dependency>
+        <!-- This should fail Linkage Monitor -->
+        <groupId>org.apache.beam</groupId>
+        <artifactId>beam-sdks-java-core</artifactId>
+        <version>2.18.0</version>
+      </dependency>
+      <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-kms-v1</artifactId>
         <version>0.82.2-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-kms-v1:current} -->
