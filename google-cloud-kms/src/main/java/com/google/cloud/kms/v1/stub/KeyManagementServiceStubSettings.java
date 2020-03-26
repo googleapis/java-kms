@@ -940,7 +940,7 @@ public class KeyManagementServiceStubSettings
 
       builder
           .updateCryptoKeyPrimaryVersionSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retryable"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
