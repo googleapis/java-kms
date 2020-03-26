@@ -1954,7 +1954,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
     return encrypt(request);
   }
 
-
   // ADDED BY SYNTH
   /**
    * Encrypts data, so that it can only be recovered by a call to
@@ -1993,7 +1992,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
             .build();
     return encrypt(request);
   }
-
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
@@ -2958,7 +2956,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
     return setIamPolicyCallable().call(request);
   }
 
-
   // ADDED BY SYNTH
   /**
    * Sets the access control policy on the specified resource. Replaces any existing policy.
@@ -3020,7 +3017,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
     return setIamPolicy(request);
   }
 
-
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
    * Sets the access control policy on the specified resource. Replaces any existing policy.
@@ -3071,7 +3067,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
     return getIamPolicyCallable().call(request);
   }
 
-
   // ADDED BY SYNTH
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the resource exists
@@ -3120,7 +3115,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
     GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder().setResource(resource).build();
     return getIamPolicy(request);
   }
-
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
@@ -3174,7 +3168,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
   public final TestIamPermissionsResponse testIamPermissions(TestIamPermissionsRequest request) {
     return testIamPermissionsCallable().call(request);
   }
-
 
   // ADDED BY SYNTH
   /**
@@ -3247,7 +3240,6 @@ public class KeyManagementServiceClient implements BackgroundResource {
             .build();
     return testIamPermissions(request);
   }
-
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**

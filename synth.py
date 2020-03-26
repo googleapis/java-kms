@@ -304,4 +304,8 @@ for version in versions:
   	IMPLEMENTS_RESOURCE_NAME,
   	EXTENDS_KEY_NAME)
 
+  java.format_code('google-cloud-kms/src')
+  java.format_code(f'grpc-google-cloud-{service}-{version}/src')
+  java.format_code(f'proto-google-cloud-{service}-{version}/src')
+
 java.common_templates()
