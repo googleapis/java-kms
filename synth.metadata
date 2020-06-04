@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-kms.git",
-        "sha": "25969ce37393f849505d17cd14560af9a2005c4c"
+        "sha": "a04299315634d343379db7e6b7d442a9c7648db9"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "c4e37010d74071851ff24121f522e802231ac86e",
-        "internalRef": "313460921"
+        "sha": "ef180e07d360d86ce0f71c448edffbf6b7ceb8c9",
+        "internalRef": "314805551"
       }
     },
     {
