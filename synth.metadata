@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "8cfc6c874574b649b4524a4ef6a0651533325a84",
-        "internalRef": "345067549"
+        "sha": "85a5954183479a9a7c2641c013cd728b6fa9b7cd",
+        "internalRef": "346440719"
       }
     },
     {
@@ -109,8 +109,6 @@
     "google-cloud-kms/src/main/java/com/google/cloud/kms/v1/stub/KeyManagementServiceStub.java",
     "google-cloud-kms/src/main/java/com/google/cloud/kms/v1/stub/KeyManagementServiceStubSettings.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/KeyManagementServiceClientTest.java",
-    "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockIAMPolicy.java",
-    "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockIAMPolicyImpl.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockKeyManagementService.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockKeyManagementServiceImpl.java",
     "grpc-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/KeyManagementServiceGrpc.java",
@@ -197,7 +195,6 @@
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/LocationName.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/ProtectionLevel.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/PublicKey.java",
-    "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/PublicKeyName.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/PublicKeyOrBuilder.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/RestoreCryptoKeyVersionRequest.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/RestoreCryptoKeyVersionRequestOrBuilder.java",
