@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "85a5954183479a9a7c2641c013cd728b6fa9b7cd",
-        "internalRef": "346440719"
+        "sha": "6d65640b1fcbdf26ea76cb720de0ac138cae9bed",
+        "internalRef": "347036369"
       }
     },
     {
@@ -195,6 +195,7 @@
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/LocationName.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/ProtectionLevel.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/PublicKey.java",
+    "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/PublicKeyName.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/PublicKeyOrBuilder.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/RestoreCryptoKeyVersionRequest.java",
     "proto-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/RestoreCryptoKeyVersionRequestOrBuilder.java",
