@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.cloud.kms.v1;
 
 import com.google.api.core.BetaApi;
@@ -23,9 +24,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import javax.annotation.Generated;
 
-@javax.annotation.Generated("by GAPIC")
 @BetaApi
+@Generated("by gapic-generator-java")
 public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
   private List<AbstractMessage> requests;
   private Queue<Object> responses;
@@ -62,10 +64,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListKeyRingsResponse) {
       requests.add(request);
-      responseObserver.onNext((ListKeyRingsResponse) response);
+      responseObserver.onNext(((ListKeyRingsResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -77,10 +79,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListCryptoKeysResponse) {
       requests.add(request);
-      responseObserver.onNext((ListCryptoKeysResponse) response);
+      responseObserver.onNext(((ListCryptoKeysResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -93,10 +95,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListCryptoKeyVersionsResponse) {
       requests.add(request);
-      responseObserver.onNext((ListCryptoKeyVersionsResponse) response);
+      responseObserver.onNext(((ListCryptoKeyVersionsResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -108,10 +110,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ListImportJobsResponse) {
       requests.add(request);
-      responseObserver.onNext((ListImportJobsResponse) response);
+      responseObserver.onNext(((ListImportJobsResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -122,10 +124,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof KeyRing) {
       requests.add(request);
-      responseObserver.onNext((KeyRing) response);
+      responseObserver.onNext(((KeyRing) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -137,10 +139,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKey) {
       requests.add(request);
-      responseObserver.onNext((CryptoKey) response);
+      responseObserver.onNext(((CryptoKey) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -152,10 +154,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKeyVersion) {
       requests.add(request);
-      responseObserver.onNext((CryptoKeyVersion) response);
+      responseObserver.onNext(((CryptoKeyVersion) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -167,10 +169,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof PublicKey) {
       requests.add(request);
-      responseObserver.onNext((PublicKey) response);
+      responseObserver.onNext(((PublicKey) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -182,10 +184,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ImportJob) {
       requests.add(request);
-      responseObserver.onNext((ImportJob) response);
+      responseObserver.onNext(((ImportJob) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -197,10 +199,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof KeyRing) {
       requests.add(request);
-      responseObserver.onNext((KeyRing) response);
+      responseObserver.onNext(((KeyRing) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -212,10 +214,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKey) {
       requests.add(request);
-      responseObserver.onNext((CryptoKey) response);
+      responseObserver.onNext(((CryptoKey) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -227,10 +229,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKeyVersion) {
       requests.add(request);
-      responseObserver.onNext((CryptoKeyVersion) response);
+      responseObserver.onNext(((CryptoKeyVersion) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -242,10 +244,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKeyVersion) {
       requests.add(request);
-      responseObserver.onNext((CryptoKeyVersion) response);
+      responseObserver.onNext(((CryptoKeyVersion) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -257,10 +259,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof ImportJob) {
       requests.add(request);
-      responseObserver.onNext((ImportJob) response);
+      responseObserver.onNext(((ImportJob) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -272,10 +274,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKey) {
       requests.add(request);
-      responseObserver.onNext((CryptoKey) response);
+      responseObserver.onNext(((CryptoKey) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -287,10 +289,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKeyVersion) {
       requests.add(request);
-      responseObserver.onNext((CryptoKeyVersion) response);
+      responseObserver.onNext(((CryptoKeyVersion) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -301,10 +303,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof EncryptResponse) {
       requests.add(request);
-      responseObserver.onNext((EncryptResponse) response);
+      responseObserver.onNext(((EncryptResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -315,10 +317,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof DecryptResponse) {
       requests.add(request);
-      responseObserver.onNext((DecryptResponse) response);
+      responseObserver.onNext(((DecryptResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -330,10 +332,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof AsymmetricSignResponse) {
       requests.add(request);
-      responseObserver.onNext((AsymmetricSignResponse) response);
+      responseObserver.onNext(((AsymmetricSignResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -346,10 +348,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof AsymmetricDecryptResponse) {
       requests.add(request);
-      responseObserver.onNext((AsymmetricDecryptResponse) response);
+      responseObserver.onNext(((AsymmetricDecryptResponse) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -361,10 +363,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKey) {
       requests.add(request);
-      responseObserver.onNext((CryptoKey) response);
+      responseObserver.onNext(((CryptoKey) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -376,10 +378,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKeyVersion) {
       requests.add(request);
-      responseObserver.onNext((CryptoKeyVersion) response);
+      responseObserver.onNext(((CryptoKeyVersion) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
@@ -391,10 +393,10 @@ public class MockKeyManagementServiceImpl extends KeyManagementServiceImplBase {
     Object response = responses.remove();
     if (response instanceof CryptoKeyVersion) {
       requests.add(request);
-      responseObserver.onNext((CryptoKeyVersion) response);
+      responseObserver.onNext(((CryptoKeyVersion) response));
       responseObserver.onCompleted();
     } else if (response instanceof Exception) {
-      responseObserver.onError((Exception) response);
+      responseObserver.onError(((Exception) response));
     } else {
       responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
     }
