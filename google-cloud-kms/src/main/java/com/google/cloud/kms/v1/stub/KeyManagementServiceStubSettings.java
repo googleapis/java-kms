@@ -121,7 +121,6 @@ import org.threeten.bp.Duration;
  *     keyManagementServiceSettingsBuilder.build();
  * }</pre>
  */
-@BetaApi
 @Generated("by gapic-generator-java")
 public class KeyManagementServiceStubSettings
     extends StubSettings<KeyManagementServiceStubSettings> {
