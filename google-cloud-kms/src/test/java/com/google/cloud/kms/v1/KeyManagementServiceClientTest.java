@@ -833,6 +833,7 @@ public class KeyManagementServiceClientTest {
             .setGenerateTime(Timestamp.newBuilder().build())
             .setExpireTime(Timestamp.newBuilder().build())
             .setExpireEventTime(Timestamp.newBuilder().build())
+            .setPublicKey(ImportJob.WrappingPublicKey.newBuilder().build())
             .setAttestation(KeyOperationAttestation.newBuilder().build())
             .build();
     mockKeyManagementService.addResponse(expectedResponse);
@@ -879,6 +880,7 @@ public class KeyManagementServiceClientTest {
             .setGenerateTime(Timestamp.newBuilder().build())
             .setExpireTime(Timestamp.newBuilder().build())
             .setExpireEventTime(Timestamp.newBuilder().build())
+            .setPublicKey(ImportJob.WrappingPublicKey.newBuilder().build())
             .setAttestation(KeyOperationAttestation.newBuilder().build())
             .build();
     mockKeyManagementService.addResponse(expectedResponse);
@@ -1304,6 +1306,7 @@ public class KeyManagementServiceClientTest {
             .setGenerateTime(Timestamp.newBuilder().build())
             .setExpireTime(Timestamp.newBuilder().build())
             .setExpireEventTime(Timestamp.newBuilder().build())
+            .setPublicKey(ImportJob.WrappingPublicKey.newBuilder().build())
             .setAttestation(KeyOperationAttestation.newBuilder().build())
             .build();
     mockKeyManagementService.addResponse(expectedResponse);
@@ -1355,6 +1358,7 @@ public class KeyManagementServiceClientTest {
             .setGenerateTime(Timestamp.newBuilder().build())
             .setExpireTime(Timestamp.newBuilder().build())
             .setExpireEventTime(Timestamp.newBuilder().build())
+            .setPublicKey(ImportJob.WrappingPublicKey.newBuilder().build())
             .setAttestation(KeyOperationAttestation.newBuilder().build())
             .build();
     mockKeyManagementService.addResponse(expectedResponse);
