@@ -23,11 +23,11 @@ import java.util.List;
 
 @javax.annotation.Generated("by GAPIC")
 @BetaApi
-public class MockKeyManagementService implements MockGrpcService {
-  private final MockKeyManagementServiceImpl serviceImpl;
+public class MockIAMPolicy implements MockGrpcService {
+  private final MockIAMPolicyImpl serviceImpl;
 
-  public MockKeyManagementService() {
-    serviceImpl = new MockKeyManagementServiceImpl();
+  public MockIAMPolicy() {
+    serviceImpl = new MockIAMPolicyImpl();
   }
 
   @Override

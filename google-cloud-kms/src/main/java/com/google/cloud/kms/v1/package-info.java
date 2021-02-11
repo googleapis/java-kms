@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,28 +15,43 @@
  */
 
 /**
- * The interfaces provided are listed below, along with usage samples.
+ * A client to Cloud Key Management Service (KMS) API.
  *
- * <p>======================= KeyManagementServiceClient =======================
+ * <p>The interfaces provided are listed below, along with usage samples.
+ *
+ * <p>========================== KeyManagementServiceClient ==========================
  *
  * <p>Service Description: Google Cloud Key Management Service
  *
  * <p>Manages cryptographic keys and operations using those keys. Implements a REST model with the
  * following objects:
  *
- * <ul>
- *   <li>[KeyRing][google.cloud.kms.v1.KeyRing]
- *   <li>[CryptoKey][google.cloud.kms.v1.CryptoKey]
- *   <li>[CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
- *   <li>[ImportJob][google.cloud.kms.v1.ImportJob]
- * </ul>
+ * <p>&#42; [KeyRing][google.cloud.kms.v1.KeyRing] &#42; [CryptoKey][google.cloud.kms.v1.CryptoKey]
+ * &#42; [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] &#42;
+ * [ImportJob][google.cloud.kms.v1.ImportJob]
  *
  * <p>If you are using manual gRPC libraries, see [Using gRPC with Cloud
  * KMS](https://cloud.google.com/kms/docs/grpc).
  *
  * <p>Sample for KeyManagementServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.create()) {
+ *   KeyRingName parent = KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]");
+ *   String importJobId = "my-import-job";
+ *   ImportJob.ImportMethod importMethod = ImportJob.ImportMethod.RSA_OAEP_3072_SHA1_AES_256;
+ *   ProtectionLevel protectionLevel = ProtectionLevel.HSM;
+ *   ImportJob importJob = ImportJob.newBuilder()
+ *     .setImportMethod(importMethod)
+ *     .setProtectionLevel(protectionLevel)
+ *     .build();
+ *   ImportJob response = keyManagementServiceClient.createImportJob(parent, importJobId, importJob);
+ * }
+ * </code>
+ * </pre>
  */
-@Generated("by gapic-generator-java")
+@Generated("by gapic-generator")
 package com.google.cloud.kms.v1;
 
 import javax.annotation.Generated;

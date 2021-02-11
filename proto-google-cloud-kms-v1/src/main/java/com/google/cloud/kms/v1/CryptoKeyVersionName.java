@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,38 +23,22 @@ import com.google.common.collect.ImmutableMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS.
-@Generated("by gapic-generator-java")
+/** AUTO-GENERATED DOCUMENTATION AND CLASS */
+@javax.annotation.Generated("by GAPIC protoc plugin")
 public class CryptoKeyVersionName implements ResourceName {
-  private static final PathTemplate PROJECT_LOCATION_KEY_RING_CRYPTO_KEY_CRYPTO_KEY_VERSION =
+
+  private static final PathTemplate PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding(
           "projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}");
+
   private volatile Map<String, String> fieldValuesMap;
+
   private final String project;
   private final String location;
   private final String keyRing;
   private final String cryptoKey;
   private final String cryptoKeyVersion;
-
-  @Deprecated
-  protected CryptoKeyVersionName() {
-    project = null;
-    location = null;
-    keyRing = null;
-    cryptoKey = null;
-    cryptoKeyVersion = null;
-  }
-
-  private CryptoKeyVersionName(Builder builder) {
-    project = Preconditions.checkNotNull(builder.getProject());
-    location = Preconditions.checkNotNull(builder.getLocation());
-    keyRing = Preconditions.checkNotNull(builder.getKeyRing());
-    cryptoKey = Preconditions.checkNotNull(builder.getCryptoKey());
-    cryptoKeyVersion = Preconditions.checkNotNull(builder.getCryptoKeyVersion());
-  }
 
   public String getProject() {
     return project;
@@ -82,6 +66,14 @@ public class CryptoKeyVersionName implements ResourceName {
 
   public Builder toBuilder() {
     return new Builder(this);
+  }
+
+  private CryptoKeyVersionName(Builder builder) {
+    project = Preconditions.checkNotNull(builder.getProject());
+    location = Preconditions.checkNotNull(builder.getLocation());
+    keyRing = Preconditions.checkNotNull(builder.getKeyRing());
+    cryptoKey = Preconditions.checkNotNull(builder.getCryptoKey());
+    cryptoKeyVersion = Preconditions.checkNotNull(builder.getCryptoKeyVersion());
   }
 
   public static CryptoKeyVersionName of(
@@ -112,7 +104,7 @@ public class CryptoKeyVersionName implements ResourceName {
       return null;
     }
     Map<String, String> matchMap =
-        PROJECT_LOCATION_KEY_RING_CRYPTO_KEY_CRYPTO_KEY_VERSION.validatedMatch(
+        PATH_TEMPLATE.validatedMatch(
             formattedString, "CryptoKeyVersionName.parse: formattedString not in valid format");
     return of(
         matchMap.get("project"),
@@ -131,7 +123,7 @@ public class CryptoKeyVersionName implements ResourceName {
   }
 
   public static List<String> toStringList(List<CryptoKeyVersionName> values) {
-    List<String> list = new ArrayList<>(values.size());
+    List<String> list = new ArrayList<String>(values.size());
     for (CryptoKeyVersionName value : values) {
       if (value == null) {
         list.add("");
@@ -143,30 +135,19 @@ public class CryptoKeyVersionName implements ResourceName {
   }
 
   public static boolean isParsableFrom(String formattedString) {
-    return PROJECT_LOCATION_KEY_RING_CRYPTO_KEY_CRYPTO_KEY_VERSION.matches(formattedString);
+    return PATH_TEMPLATE.matches(formattedString);
   }
 
-  @Override
   public Map<String, String> getFieldValuesMap() {
     if (fieldValuesMap == null) {
       synchronized (this) {
         if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
-          if (project != null) {
-            fieldMapBuilder.put("project", project);
-          }
-          if (location != null) {
-            fieldMapBuilder.put("location", location);
-          }
-          if (keyRing != null) {
-            fieldMapBuilder.put("key_ring", keyRing);
-          }
-          if (cryptoKey != null) {
-            fieldMapBuilder.put("crypto_key", cryptoKey);
-          }
-          if (cryptoKeyVersion != null) {
-            fieldMapBuilder.put("crypto_key_version", cryptoKeyVersion);
-          }
+          fieldMapBuilder.put("project", project);
+          fieldMapBuilder.put("location", location);
+          fieldMapBuilder.put("keyRing", keyRing);
+          fieldMapBuilder.put("cryptoKey", cryptoKey);
+          fieldMapBuilder.put("cryptoKeyVersion", cryptoKeyVersion);
           fieldValuesMap = fieldMapBuilder.build();
         }
       }
@@ -180,7 +161,7 @@ public class CryptoKeyVersionName implements ResourceName {
 
   @Override
   public String toString() {
-    return PROJECT_LOCATION_KEY_RING_CRYPTO_KEY_CRYPTO_KEY_VERSION.instantiate(
+    return PATH_TEMPLATE.instantiate(
         "project",
         project,
         "location",
@@ -193,50 +174,14 @@ public class CryptoKeyVersionName implements ResourceName {
         cryptoKeyVersion);
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (o == this) {
-      return true;
-    }
-    if (o != null || getClass() == o.getClass()) {
-      CryptoKeyVersionName that = ((CryptoKeyVersionName) o);
-      return Objects.equals(this.project, that.project)
-          && Objects.equals(this.location, that.location)
-          && Objects.equals(this.keyRing, that.keyRing)
-          && Objects.equals(this.cryptoKey, that.cryptoKey)
-          && Objects.equals(this.cryptoKeyVersion, that.cryptoKeyVersion);
-    }
-    return false;
-  }
-
-  @Override
-  public int hashCode() {
-    int h = 1;
-    h *= 1000003;
-    h ^= Objects.hashCode(project);
-    h *= 1000003;
-    h ^= Objects.hashCode(location);
-    h *= 1000003;
-    h ^= Objects.hashCode(keyRing);
-    h *= 1000003;
-    h ^= Objects.hashCode(cryptoKey);
-    h *= 1000003;
-    h ^= Objects.hashCode(cryptoKeyVersion);
-    return h;
-  }
-
-  /**
-   * Builder for
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}.
-   */
+  /** Builder for CryptoKeyVersionName. */
   public static class Builder {
+
     private String project;
     private String location;
     private String keyRing;
     private String cryptoKey;
     private String cryptoKeyVersion;
-
-    protected Builder() {}
 
     public String getProject() {
       return project;
@@ -283,6 +228,8 @@ public class CryptoKeyVersionName implements ResourceName {
       return this;
     }
 
+    private Builder() {}
+
     private Builder(CryptoKeyVersionName cryptoKeyVersionName) {
       project = cryptoKeyVersionName.project;
       location = cryptoKeyVersionName.location;
@@ -294,5 +241,37 @@ public class CryptoKeyVersionName implements ResourceName {
     public CryptoKeyVersionName build() {
       return new CryptoKeyVersionName(this);
     }
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (o == this) {
+      return true;
+    }
+    if (o instanceof CryptoKeyVersionName) {
+      CryptoKeyVersionName that = (CryptoKeyVersionName) o;
+      return (this.project.equals(that.project))
+          && (this.location.equals(that.location))
+          && (this.keyRing.equals(that.keyRing))
+          && (this.cryptoKey.equals(that.cryptoKey))
+          && (this.cryptoKeyVersion.equals(that.cryptoKeyVersion));
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    int h = 1;
+    h *= 1000003;
+    h ^= project.hashCode();
+    h *= 1000003;
+    h ^= location.hashCode();
+    h *= 1000003;
+    h ^= keyRing.hashCode();
+    h *= 1000003;
+    h ^= cryptoKey.hashCode();
+    h *= 1000003;
+    h ^= cryptoKeyVersion.hashCode();
+    return h;
   }
 }

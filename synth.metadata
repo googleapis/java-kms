@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "91e206bcfeaf8948ea03fe3cb1b7616108496cd3",
-        "internalRef": "350949863"
+        "sha": "f1b2cc9c37f453c3b15e8945af32812f71634022",
+        "internalRef": "351867503"
       }
     },
     {
@@ -109,6 +109,8 @@
     "google-cloud-kms/src/main/java/com/google/cloud/kms/v1/stub/KeyManagementServiceStub.java",
     "google-cloud-kms/src/main/java/com/google/cloud/kms/v1/stub/KeyManagementServiceStubSettings.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/KeyManagementServiceClientTest.java",
+    "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockIAMPolicy.java",
+    "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockIAMPolicyImpl.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockKeyManagementService.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockKeyManagementServiceImpl.java",
     "grpc-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/KeyManagementServiceGrpc.java",

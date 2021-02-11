@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      https://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.google.cloud.kms.v1;
 
 import static com.google.cloud.kms.v1.KeyManagementServiceClient.ListCryptoKeyVersionsPagedResponse;
@@ -33,11 +32,16 @@ import com.google.api.gax.rpc.PagedCallSettings;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.api.gax.rpc.UnaryCallSettings;
 import com.google.cloud.kms.v1.stub.KeyManagementServiceStubSettings;
+import com.google.iam.v1.GetIamPolicyRequest;
+import com.google.iam.v1.Policy;
+import com.google.iam.v1.SetIamPolicyRequest;
+import com.google.iam.v1.TestIamPermissionsRequest;
+import com.google.iam.v1.TestIamPermissionsResponse;
 import java.io.IOException;
 import java.util.List;
 import javax.annotation.Generated;
 
-// AUTO-GENERATED DOCUMENTATION AND CLASS.
+// AUTO-GENERATED DOCUMENTATION AND CLASS
 /**
  * Settings class to configure an instance of {@link KeyManagementServiceClient}.
  *
@@ -52,26 +56,50 @@ import javax.annotation.Generated;
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
  * build() is called, the tree of builders is called to create the complete settings object.
  *
- * <p>For example, to set the total timeout of getKeyRing to 30 seconds:
+ * <p>For example, to set the total timeout of createImportJob to 30 seconds:
  *
- * <pre>{@code
+ * <pre>
+ * <code>
  * KeyManagementServiceSettings.Builder keyManagementServiceSettingsBuilder =
  *     KeyManagementServiceSettings.newBuilder();
  * keyManagementServiceSettingsBuilder
- *     .getKeyRingSettings()
+ *     .createImportJobSettings()
  *     .setRetrySettings(
- *         keyManagementServiceSettingsBuilder
- *             .getKeyRingSettings()
- *             .getRetrySettings()
- *             .toBuilder()
+ *         keyManagementServiceSettingsBuilder.createImportJobSettings().getRetrySettings().toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
- * KeyManagementServiceSettings keyManagementServiceSettings =
- *     keyManagementServiceSettingsBuilder.build();
- * }</pre>
+ * KeyManagementServiceSettings keyManagementServiceSettings = keyManagementServiceSettingsBuilder.build();
+ * </code>
+ * </pre>
  */
-@Generated("by gapic-generator-java")
+@Generated("by gapic-generator")
+@BetaApi
 public class KeyManagementServiceSettings extends ClientSettings<KeyManagementServiceSettings> {
+  /** Returns the object with the settings used for calls to createImportJob. */
+  public UnaryCallSettings<CreateImportJobRequest, ImportJob> createImportJobSettings() {
+    return ((KeyManagementServiceStubSettings) getStubSettings()).createImportJobSettings();
+  }
+
+  /** Returns the object with the settings used for calls to createCryptoKey. */
+  public UnaryCallSettings<CreateCryptoKeyRequest, CryptoKey> createCryptoKeySettings() {
+    return ((KeyManagementServiceStubSettings) getStubSettings()).createCryptoKeySettings();
+  }
+
+  /** Returns the object with the settings used for calls to setIamPolicy. */
+  public UnaryCallSettings<SetIamPolicyRequest, Policy> setIamPolicySettings() {
+    return ((KeyManagementServiceStubSettings) getStubSettings()).setIamPolicySettings();
+  }
+
+  /** Returns the object with the settings used for calls to getIamPolicy. */
+  public UnaryCallSettings<GetIamPolicyRequest, Policy> getIamPolicySettings() {
+    return ((KeyManagementServiceStubSettings) getStubSettings()).getIamPolicySettings();
+  }
+
+  /** Returns the object with the settings used for calls to testIamPermissions. */
+  public UnaryCallSettings<TestIamPermissionsRequest, TestIamPermissionsResponse>
+      testIamPermissionsSettings() {
+    return ((KeyManagementServiceStubSettings) getStubSettings()).testIamPermissionsSettings();
+  }
 
   /** Returns the object with the settings used for calls to listKeyRings. */
   public PagedCallSettings<ListKeyRingsRequest, ListKeyRingsResponse, ListKeyRingsPagedResponse>
@@ -133,11 +161,6 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
     return ((KeyManagementServiceStubSettings) getStubSettings()).createKeyRingSettings();
   }
 
-  /** Returns the object with the settings used for calls to createCryptoKey. */
-  public UnaryCallSettings<CreateCryptoKeyRequest, CryptoKey> createCryptoKeySettings() {
-    return ((KeyManagementServiceStubSettings) getStubSettings()).createCryptoKeySettings();
-  }
-
   /** Returns the object with the settings used for calls to createCryptoKeyVersion. */
   public UnaryCallSettings<CreateCryptoKeyVersionRequest, CryptoKeyVersion>
       createCryptoKeyVersionSettings() {
@@ -148,11 +171,6 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
   public UnaryCallSettings<ImportCryptoKeyVersionRequest, CryptoKeyVersion>
       importCryptoKeyVersionSettings() {
     return ((KeyManagementServiceStubSettings) getStubSettings()).importCryptoKeyVersionSettings();
-  }
-
-  /** Returns the object with the settings used for calls to createImportJob. */
-  public UnaryCallSettings<CreateImportJobRequest, ImportJob> createImportJobSettings() {
-    return ((KeyManagementServiceStubSettings) getStubSettings()).createImportJobSettings();
   }
 
   /** Returns the object with the settings used for calls to updateCryptoKey. */
@@ -267,13 +285,16 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
   /** Builder for KeyManagementServiceSettings. */
   public static class Builder
       extends ClientSettings.Builder<KeyManagementServiceSettings, Builder> {
-
     protected Builder() throws IOException {
-      this(((ClientContext) null));
+      this((ClientContext) null);
     }
 
     protected Builder(ClientContext clientContext) {
       super(KeyManagementServiceStubSettings.newBuilder(clientContext));
+    }
+
+    private static Builder createDefault() {
+      return new Builder(KeyManagementServiceStubSettings.newBuilder());
     }
 
     protected Builder(KeyManagementServiceSettings settings) {
@@ -284,15 +305,11 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
       super(stubSettings);
     }
 
-    private static Builder createDefault() {
-      return new Builder(KeyManagementServiceStubSettings.newBuilder());
-    }
-
     public KeyManagementServiceStubSettings.Builder getStubSettingsBuilder() {
       return ((KeyManagementServiceStubSettings.Builder) getStubSettings());
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'.
+    // NEXT_MAJOR_VER: remove 'throws Exception'
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
@@ -303,6 +320,32 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
       super.applyToAllUnaryMethods(
           getStubSettingsBuilder().unaryMethodSettingsBuilders(), settingsUpdater);
       return this;
+    }
+
+    /** Returns the builder for the settings used for calls to createImportJob. */
+    public UnaryCallSettings.Builder<CreateImportJobRequest, ImportJob> createImportJobSettings() {
+      return getStubSettingsBuilder().createImportJobSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createCryptoKey. */
+    public UnaryCallSettings.Builder<CreateCryptoKeyRequest, CryptoKey> createCryptoKeySettings() {
+      return getStubSettingsBuilder().createCryptoKeySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to setIamPolicy. */
+    public UnaryCallSettings.Builder<SetIamPolicyRequest, Policy> setIamPolicySettings() {
+      return getStubSettingsBuilder().setIamPolicySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to getIamPolicy. */
+    public UnaryCallSettings.Builder<GetIamPolicyRequest, Policy> getIamPolicySettings() {
+      return getStubSettingsBuilder().getIamPolicySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to testIamPermissions. */
+    public UnaryCallSettings.Builder<TestIamPermissionsRequest, TestIamPermissionsResponse>
+        testIamPermissionsSettings() {
+      return getStubSettingsBuilder().testIamPermissionsSettings();
     }
 
     /** Returns the builder for the settings used for calls to listKeyRings. */
@@ -366,11 +409,6 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
       return getStubSettingsBuilder().createKeyRingSettings();
     }
 
-    /** Returns the builder for the settings used for calls to createCryptoKey. */
-    public UnaryCallSettings.Builder<CreateCryptoKeyRequest, CryptoKey> createCryptoKeySettings() {
-      return getStubSettingsBuilder().createCryptoKeySettings();
-    }
-
     /** Returns the builder for the settings used for calls to createCryptoKeyVersion. */
     public UnaryCallSettings.Builder<CreateCryptoKeyVersionRequest, CryptoKeyVersion>
         createCryptoKeyVersionSettings() {
@@ -381,11 +419,6 @@ public class KeyManagementServiceSettings extends ClientSettings<KeyManagementSe
     public UnaryCallSettings.Builder<ImportCryptoKeyVersionRequest, CryptoKeyVersion>
         importCryptoKeyVersionSettings() {
       return getStubSettingsBuilder().importCryptoKeyVersionSettings();
-    }
-
-    /** Returns the builder for the settings used for calls to createImportJob. */
-    public UnaryCallSettings.Builder<CreateImportJobRequest, ImportJob> createImportJobSettings() {
-      return getStubSettingsBuilder().createImportJobSettings();
     }
 
     /** Returns the builder for the settings used for calls to updateCryptoKey. */
