@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "8d1d6694519ed9a1195067cd2138376ac1389883",
-        "internalRef": "379309757"
+        "sha": "5308b867571251f064b376b658108a77d1a5de6c",
+        "internalRef": "379592845"
       }
     },
     {
@@ -114,6 +114,8 @@
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/KeyManagementServiceClientTest.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockKeyManagementService.java",
     "google-cloud-kms/src/test/java/com/google/cloud/kms/v1/MockKeyManagementServiceImpl.java",
+    "google-cloud-kms/src/test/java/com/google/iam/v1/MockIAMPolicy.java",
+    "google-cloud-kms/src/test/java/com/google/iam/v1/MockIAMPolicyImpl.java",
     "grpc-google-cloud-kms-v1/src/main/java/com/google/cloud/kms/v1/KeyManagementServiceGrpc.java",
     "java.header",
     "license-checks.xml",

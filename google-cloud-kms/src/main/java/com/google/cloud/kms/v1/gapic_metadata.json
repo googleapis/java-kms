@@ -43,6 +43,9 @@
             "GetCryptoKeyVersion": {
               "methods": ["getCryptoKeyVersion", "getCryptoKeyVersion", "getCryptoKeyVersion", "getCryptoKeyVersionCallable"]
             },
+            "GetIamPolicy": {
+              "methods": ["getIamPolicy", "getIamPolicyCallable"]
+            },
             "GetImportJob": {
               "methods": ["getImportJob", "getImportJob", "getImportJob", "getImportJobCallable"]
             },
@@ -69,6 +72,12 @@
             },
             "RestoreCryptoKeyVersion": {
               "methods": ["restoreCryptoKeyVersion", "restoreCryptoKeyVersion", "restoreCryptoKeyVersion", "restoreCryptoKeyVersionCallable"]
+            },
+            "SetIamPolicy": {
+              "methods": ["setIamPolicy", "setIamPolicyCallable"]
+            },
+            "TestIamPermissions": {
+              "methods": ["testIamPermissions", "testIamPermissionsCallable"]
             },
             "UpdateCryptoKey": {
               "methods": ["updateCryptoKey", "updateCryptoKey", "updateCryptoKeyCallable"]
