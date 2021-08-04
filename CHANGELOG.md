@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.44.0](https://www.github.com/googleapis/java-kms/compare/v1.43.0...v1.44.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#559](https://www.github.com/googleapis/java-kms/issues/559)) ([199787d](https://www.github.com/googleapis/java-kms/commit/199787db8f34ceda628b2b308ef3053f40bebb16))
+
 ## [1.43.0](https://www.github.com/googleapis/java-kms/compare/v1.42.3...v1.43.0) (2021-07-05)
 
 
