@@ -29,16 +29,16 @@ This project follows
 
 ## Building the project
 
-To build, package, and run all unit tests run the command
+To build, package, and run all unit tests, run:
 
-```
+```bash
 mvn clean verify
 ```
 
 ### Running Integration tests
 
 To include integration tests when building the project, you need access to
-a GCP Project with a valid service account. 
+a GCP Project with a valid service account.
 
 For instructions on how to generate a service account and corresponding
 credentials JSON see: [Creating a Service Account][1].
@@ -62,9 +62,13 @@ The samples must be separate from the primary project for a few reasons:
    selectively exclude samples from a build run.
 2. Many code samples depend on external GCP services and need
    credentials to access the service.
-3. Code samples are not released as Maven artifacts and must be excluded from 
+3. Code samples are not released as Maven artifacts and must be excluded from
    release builds.
-   
+
+**Note:** If you are building samples against an unreleased SNAPSHOT (e.g. for a
+new API or unreleased proto field), change directory into the `samples/snapshot`
+directory before running the tests.
+
 ### Building
 
 ```bash
@@ -106,13 +110,14 @@ mvn -Penable-samples clean verify
 Code in this repo is formatted with
 [google-java-format](https://github.com/google/google-java-format).
 To run formatting on your project, you can run:
-```
+
+```bash
 mvn com.coveo:fmt-maven-plugin:format
 ```
 
 ### Profile Activation
 
-To include code samples when building and testing the project, enable the 
+To include code samples when building and testing the project, enable the
 `enable-samples` Maven profile.
 
 #### Command line
