@@ -1748,11 +1748,12 @@ public class KeyManagementServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Imports a new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] into an existing
-   * [CryptoKey][google.cloud.kms.v1.CryptoKey] using the wrapped key material provided in the
-   * request.
+   * Import wrapped key material into a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
    *
-   * <p>The version ID will be assigned the next sequential id within the
+   * <p>All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If a
+   * [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally specified in the
+   * request, key material will be reimported into that version. Otherwise, a new version will be
+   * created, and will be assigned the next sequential id within the
    * [CryptoKey][google.cloud.kms.v1.CryptoKey].
    *
    * <p>Sample code:
@@ -1764,6 +1765,14 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *       ImportCryptoKeyVersionRequest.newBuilder()
    *           .setParent(
    *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
+   *           .setCryptoKeyVersion(
+   *               CryptoKeyVersionName.of(
+   *                       "[PROJECT]",
+   *                       "[LOCATION]",
+   *                       "[KEY_RING]",
+   *                       "[CRYPTO_KEY]",
+   *                       "[CRYPTO_KEY_VERSION]")
    *                   .toString())
    *           .setImportJob("importJob-208547368")
    *           .build();
@@ -1780,11 +1789,12 @@ public class KeyManagementServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Imports a new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] into an existing
-   * [CryptoKey][google.cloud.kms.v1.CryptoKey] using the wrapped key material provided in the
-   * request.
+   * Import wrapped key material into a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
    *
-   * <p>The version ID will be assigned the next sequential id within the
+   * <p>All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If a
+   * [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally specified in the
+   * request, key material will be reimported into that version. Otherwise, a new version will be
+   * created, and will be assigned the next sequential id within the
    * [CryptoKey][google.cloud.kms.v1.CryptoKey].
    *
    * <p>Sample code:
@@ -1796,6 +1806,14 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *       ImportCryptoKeyVersionRequest.newBuilder()
    *           .setParent(
    *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
+   *           .setCryptoKeyVersion(
+   *               CryptoKeyVersionName.of(
+   *                       "[PROJECT]",
+   *                       "[LOCATION]",
+   *                       "[KEY_RING]",
+   *                       "[CRYPTO_KEY]",
+   *                       "[CRYPTO_KEY_VERSION]")
    *                   .toString())
    *           .setImportJob("importJob-208547368")
    *           .build();
@@ -2275,10 +2293,11 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *
    * <p>Upon calling this method,
    * [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-   * hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-   * will be changed to
+   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to the time
+   * [destroy_scheduled_duration][google.cloud.kms.v1.CryptoKey.destroy_scheduled_duration] in the
+   * future. At that time, the [state][google.cloud.kms.v1.CryptoKeyVersion.state] will
+   * automatically change to
    * [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
    * material will be irrevocably destroyed.
    *
@@ -2316,10 +2335,11 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *
    * <p>Upon calling this method,
    * [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-   * hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-   * will be changed to
+   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to the time
+   * [destroy_scheduled_duration][google.cloud.kms.v1.CryptoKey.destroy_scheduled_duration] in the
+   * future. At that time, the [state][google.cloud.kms.v1.CryptoKeyVersion.state] will
+   * automatically change to
    * [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
    * material will be irrevocably destroyed.
    *
@@ -2356,10 +2376,11 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *
    * <p>Upon calling this method,
    * [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-   * hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-   * will be changed to
+   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to the time
+   * [destroy_scheduled_duration][google.cloud.kms.v1.CryptoKey.destroy_scheduled_duration] in the
+   * future. At that time, the [state][google.cloud.kms.v1.CryptoKeyVersion.state] will
+   * automatically change to
    * [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
    * material will be irrevocably destroyed.
    *
@@ -2400,10 +2421,11 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *
    * <p>Upon calling this method,
    * [CryptoKeyVersion.state][google.cloud.kms.v1.CryptoKeyVersion.state] will be set to
-   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
-   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to a time 24
-   * hours in the future, at which point the [state][google.cloud.kms.v1.CryptoKeyVersion.state]
-   * will be changed to
+   * [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+   * and [destroy_time][google.cloud.kms.v1.CryptoKeyVersion.destroy_time] will be set to the time
+   * [destroy_scheduled_duration][google.cloud.kms.v1.CryptoKey.destroy_scheduled_duration] in the
+   * future. At that time, the [state][google.cloud.kms.v1.CryptoKeyVersion.state] will
+   * automatically change to
    * [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED], and the key
    * material will be irrevocably destroyed.
    *
@@ -2597,7 +2619,7 @@ public class KeyManagementServiceClient implements BackgroundResource {
    * <pre>{@code
    * try (KeyManagementServiceClient keyManagementServiceClient =
    *     KeyManagementServiceClient.create()) {
-   *   ResourceName name = KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]");
+   *   ResourceName name = CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]");
    *   ByteString plaintext = ByteString.EMPTY;
    *   EncryptResponse response = keyManagementServiceClient.encrypt(name, plaintext);
    * }
@@ -2676,7 +2698,8 @@ public class KeyManagementServiceClient implements BackgroundResource {
    * <pre>{@code
    * try (KeyManagementServiceClient keyManagementServiceClient =
    *     KeyManagementServiceClient.create()) {
-   *   String name = KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString();
+   *   String name =
+   *       CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]").toString();
    *   ByteString plaintext = ByteString.EMPTY;
    *   EncryptResponse response = keyManagementServiceClient.encrypt(name, plaintext);
    * }
@@ -2715,7 +2738,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   EncryptRequest request =
    *       EncryptRequest.newBuilder()
-   *           .setName(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setName(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .setPlaintext(ByteString.EMPTY)
    *           .setAdditionalAuthenticatedData(ByteString.EMPTY)
    *           .setPlaintextCrc32C(Int64Value.newBuilder().build())
@@ -2746,7 +2771,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   EncryptRequest request =
    *       EncryptRequest.newBuilder()
-   *           .setName(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setName(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .setPlaintext(ByteString.EMPTY)
    *           .setAdditionalAuthenticatedData(ByteString.EMPTY)
    *           .setPlaintextCrc32C(Int64Value.newBuilder().build())
@@ -3566,7 +3593,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
-   *           .setResource(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setResource(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .build();
    *   Policy response = keyManagementServiceClient.setIamPolicy(request);
@@ -3654,7 +3683,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
-   *           .setResource(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setResource(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .build();
    *   ApiFuture<Policy> future =
@@ -3680,7 +3711,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
-   *           .setResource(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setResource(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
    *   Policy response = keyManagementServiceClient.getIamPolicy(request);
@@ -3755,7 +3788,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
-   *           .setResource(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setResource(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
    *   ApiFuture<Policy> future =
@@ -3785,7 +3820,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
-   *           .setResource(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setResource(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();
    *   TestIamPermissionsResponse response = keyManagementServiceClient.testIamPermissions(request);
@@ -3887,7 +3924,9 @@ public class KeyManagementServiceClient implements BackgroundResource {
    *     KeyManagementServiceClient.create()) {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
-   *           .setResource(KeyRingName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]").toString())
+   *           .setResource(
+   *               CryptoKeyName.of("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]")
+   *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();
    *   ApiFuture<TestIamPermissionsResponse> future =
