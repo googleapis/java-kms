@@ -4,22 +4,22 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-kms.git",
-        "sha": "2f569c967b5fda5adbcab92244c279146086f4bc"
+        "sha": "918e9e7188ab712823aef4dd6b64be84c44bcd18"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "2efb6951f151116fb7b5766fb4e377db465d49e9",
-        "internalRef": "389008671"
+        "sha": "e3d9b11abaec81e1c3c9c7cab1f3bb6fa3990651",
+        "internalRef": "393749648"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "ff01716e16d2c6e87eaf87197b753ac9fcbbed5d"
+        "sha": "9a238a0623879c3de129a376c6085d4a862f6eb9"
       }
     }
   ],
@@ -44,6 +44,7 @@
     ".github/generated-files-bot.yml",
     ".github/readme/synth.py",
     ".github/release-please.yml",
+    ".github/release-trigger.yml",
     ".github/snippet-bot.yml",
     ".github/sync-repo-settings.yaml",
     ".github/trusted-contribution.yml",
