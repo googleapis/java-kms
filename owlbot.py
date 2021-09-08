@@ -290,7 +290,7 @@ for library in s.get_staging_dirs():
         IMPLEMENTS_RESOURCE_NAME,
         EXTENDS_KEY_NAME)
 
-s.move(library)
+    s.move(library)
 
 s.remove_staging_dirs()
 java.common_templates()
