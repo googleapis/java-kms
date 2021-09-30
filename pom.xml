@@ -4,7 +4,7 @@
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-kms-parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.1.2-SNAPSHOT</version><!-- {x-version-update:google-cloud-kms:current} -->
+  <version>2.1.3-SNAPSHOT</version><!-- {x-version-update:google-cloud-kms:current} -->
   <name>Google Cloud KMS Parent</name>
   <url>https://github.com/googleapis/java-kms</url>
   <description>
@@ -14,7 +14,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-shared-config</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
   </parent>
 
   <developers>
@@ -61,28 +61,28 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-kms-v1</artifactId>
-        <version>0.92.2-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-kms-v1:current} -->
+        <version>0.92.3-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-kms-v1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-kms-v1</artifactId>
-        <version>0.92.2-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-kms-v1:current} -->
+        <version>0.92.3-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-kms-v1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-kms</artifactId>
-        <version>2.1.2-SNAPSHOT</version><!-- {x-version-update:google-cloud-kms:current} -->
+        <version>2.1.3-SNAPSHOT</version><!-- {x-version-update:google-cloud-kms:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-kms-bom</artifactId>
-        <version>2.1.1</version><!-- {x-version-update:google-cloud-kms-bom:current} -->
+        <version>2.1.2</version><!-- {x-version-update:google-cloud-kms-bom:current} -->
       </dependency>
 
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-shared-dependencies</artifactId>
-        <version>2.2.1</version>
+        <version>2.3.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
