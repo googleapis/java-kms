@@ -45,7 +45,7 @@ public class VerifyAsymmetricEc {
     verifyAsymmetricEc(projectId, locationId, keyRingId, keyId, keyVersionId, message, signature);
   }
 
-  // Verify the signature of a message signed with an RSA key.
+  // Verify the signature of a message signed with an EC key.
   public void verifyAsymmetricEc(
       String projectId,
       String locationId,
@@ -76,7 +76,7 @@ public class VerifyAsymmetricEc {
       X509EncodedKeySpec keySpec = new X509EncodedKeySpec(derKey);
       java.security.PublicKey ecKey = KeyFactory.getInstance("EC").generatePublic(keySpec);
 
-      // Verify the 'RSA_SIGN_PKCS1_2048_SHA256' signature.
+      // Verify the 'EC_SIGN_P256_SHA256' signature.
       // For other key algorithms:
       // http://docs.oracle.com/javase/7/docs/technotes/guides/security/StandardNames.html#Signature
       Signature ecVerify = Signature.getInstance("SHA256withECDSA");
